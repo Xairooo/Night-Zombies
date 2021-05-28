@@ -127,8 +127,7 @@ namespace Oxide.Plugins
 
         private bool CanSpawn()
         {
-            if ((config.SpawnSettings.reverseTimings && TOD_Sky.Instance.IsDay || !config.SpawnSettings.reverseTimings && TOD_Sky.Instance.IsNight) && 
-                daysSinceSpawn >= config.SpawnSettings.Chance.days && Random.Range(0, 101) < config.SpawnSettings.Chance.chance) return true;
+            if (Random.Range(0, 101) < config.SpawnSettings.Chance.chance) return true;
             else return false;
         }
 
@@ -240,9 +239,6 @@ namespace Oxide.Plugins
 
                 [JsonProperty(PropertyName = "Scarecrow Health")]
                 public float scarecrowHealth = 200f;
-
-                [JsonProperty(PropertyName = "Reverse Spawn Timings")]
-                public bool reverseTimings = false;
 
                 [JsonProperty(PropertyName = "Chance Settings")]
                 public ChanceSetings Chance = new ChanceSetings();
