@@ -15,9 +15,9 @@ using Newtonsoft.Json;
 
 namespace Oxide.Plugins
 {
-    [Info("Night Zombies", "0x89A", "2.1.0")]
-    [Description("Spawns zombies at night, kills them at sunrise")]
-    class NightZombies : CovalencePlugin
+    [Info("Zombies", "0x89A & Xairo", "2.2.0")]
+    [Description("Spawns zombies")]
+    class Zombies : CovalencePlugin
     {
         private Configuration config;
 
